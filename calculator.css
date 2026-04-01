@@ -1,0 +1,129 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container that holds everything */
+.calculator-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.calculator-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* The display screen at the top */
+.display {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Grid layout for buttons - 4 columns */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal columns */
+    gap: 10px;  /* Space between buttons */
+}
+
+/* Basic button styling */
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    cursor: pointer;  /* Hand cursor when hovering */
+    transition: all 0.2s;  /* Smooth animation */
+    font-weight: 500;
+}
+
+/* What happens when you hover over a button */
+.btn:hover {
+    background-color: #bdc3c7;
+    transform: scale(1.05);  /* Grows slightly bigger */
+}
+
+/* What happens when you press a button */
+.btn:active {
+    transform: scale(0.95);  /* Shrinks slightly */
+}
+
+/* Operator buttons (+, -, ×, /) - orange color */
+.btn-operator {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-operator:hover {
+    background-color: #d35400;
+}
+
+/* Clear button - red color */
+.btn-clear {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-clear:hover {
+    background-color: #c0392b;
+}
+
+/* Equals button - green color */
+.btn-equals {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-equals:hover {
+    background-color: #229954;
+}
+
+/* Make it work on mobile phones */
+@media (max-width: 480px) {
+    .display {
+        font-size: 2rem;
+        padding: 15px;
+        min-height: 60px;
+    }
+    
+    .btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .calculator-container {
+        padding: 20px;
+    }
+}
